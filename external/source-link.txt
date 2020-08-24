@@ -1,0 +1,12 @@
+https://music.arts.uci.edu/dobrian/maxcookbook/behringer-bcf2000-emulator
+
+Attached is a .zip archive containing a couple of files that are useful in conjunction with the Behringer BCF2000 MIDI/USB controller interface. One is "BCF2000.maxpat", a graphic interface for getting, showing, and sending BCF2000 data, and for emulating the interface if you don't actually have it with you. The other is "BCF2000router.maxpat", which takes care of directing the data from BCF2000.maxpat to named receive objects so that you can easily use the data anywhere else in Max.
+Technical details: BCFrouter.maxpat requires BCF2000.maxpat. BCF2000.maxpat requires the small image file BCF2000.jpg. BCF2000.maxpat is hard-coded to work with/as factory preset 1. Both patches are set to open in Presentation mode, but you can easily edit the patches yourself if you don't like the choices I made in designing them.
+I hope you find them helpful.
+
+How stupid I am! Was just trying some stuff out thanks to your replies, and stumbled across standalone mode 4 on the BCF2000 which outputs incoming midi data from the other midi output. Voila!
+
+Standalone mode s-4
+http://www.music.mcgill.ca/dcs/Manuals/Hardware/BCF2000_BCR2000_M_EN.pdf
+Page 13
+

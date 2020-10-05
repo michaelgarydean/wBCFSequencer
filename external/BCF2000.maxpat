@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 3,
+			"revision" : 6,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 525.0, 45.0, 420.0, 445.0 ],
+		"rect" : [ 914.0, 66.0, 689.0, 685.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -1598,7 +1598,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-52",
-					"items" : [ "IAC Driver Bus 1", ",", "to Max 1", ",", "to Max 2" ],
+					"items" : [ "Network Membrane", ",", "Network Touchdesigner MIDI", ",", "IAC Driver Bus 1", ",", "touchAble", ",", "to Max 1", ",", "to Max 2", ",", "wBCFSequencer1.15.amxd" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -3623,8 +3623,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "BCF2000.jpg",
-				"bootpath" : "~/Documents/Old Documents/Documents/UCI (old)/Max Examples/BCF2000patches",
-				"patcherrelativepath" : "../../../Old Documents/Documents/UCI (old)/Max Examples/BCF2000patches",
+				"bootpath" : "~/Documents/Wiklow Shop/Max for Live/wBCFSequencer/external",
+				"patcherrelativepath" : ".",
 				"type" : "JPEG",
 				"implicit" : 1
 			}

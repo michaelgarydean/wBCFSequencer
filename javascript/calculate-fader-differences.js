@@ -33,9 +33,8 @@ updatePositions.local = 1;
 var frozen_positions;			// The positions of the faders when the "Fader Link" button was turned on.
 var new_positions;				// New positions to set the faders to in the step sequencer.
 
-var num_steps = 16;			// Number of steps in the sequencer
+var num_steps = 16;				// Number of steps in the sequencer
 var positions_saved = 0;		// A flag to determine whether the positions have already been saved or not.
-
 
 var fader_link_state = 0;		// Has the "Fader Link" button been pressed?
 
@@ -95,17 +94,37 @@ function fill_array(input_array, value) {
 /*
  * For a given list, calculate the difference between the element being updated and the frozen positions.
  */
-function calculateDifferences(index,value) {
-	var difference = value - frozen_positions[index];
+function calculateDifferences(step,value) {
+	var new_step;
 	
+	//Get the frozen value for the current step
+	var current_step_frozen_value = frozen_positions[step-1];
+	
+	//Get the difference between the frozen value and the current value
+	var difference = value - current_step_frozen_value;
+
+	//Apply the same difference to all steps
 	for(var i=0; i < frozen_positions.length; i++) {
 		
-		//Only calculate a new position if the frozen position was some value other than 0.
-		if(frozen_positions[i]!=0) {
-			new_positions[i] = frozen_positions[i]+difference;
+		
+		if (i!=(step-1)) {
+			
+			//Only calculate a new position if the frozen position was some value other than 0.
+			if(frozen_positions[i]!=0) {
+				new_step = frozen_positions[i]+difference;
+			} else {
+				new_step = 0;
+			}
+			
 		} else {
-			new_positions[i] = 0;
+			//otherwise add to all steps
+			new_step = frozen_positions[i]+difference;
 		}
+
+		
+			
+		//Unless current step was 0 when frozen, then add to all steps
+		new_positions[i] = new_step;
 	}
 	
 	updatePositions(new_positions);

@@ -17,7 +17,7 @@
 /* initialize attributes */
 autowatch = 1;
 inlets = 1;		
-outlets = 3;	// Total number of buttons + 1
+outlets = 4;	// Total number of buttons + 1
 
 /* Set up private functions */
 onLoad.local = 1;
@@ -50,16 +50,25 @@ function onLoad() {
 function note_mode() {
 	outlet(0,1);
 	outlet(1,0);
+	outlet(2,0);
 	outputMode(0);
 }
 
 function cc_mode() {
-	outlet(1,1);
 	outlet(0,0);
+	outlet(1,1);
+	outlet(2,0);
 	outputMode(1);
 }
 
+function delay_mode() {
+	outlet(0,0);
+	outlet(1,0);
+	outlet(2,1);
+	outputMode(2);
+}
+
 function outputMode(current_mode) {
-	outlet(2,current_mode);
+	outlet(3,current_mode);
 }
 

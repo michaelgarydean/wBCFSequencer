@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 768.0, 153.0, 564.0, 563.0 ],
+		"rect" : [ 816.0, 155.0, 476.0, 563.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -45,10 +45,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 170.5, 65.0, 50.0, 28.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 173.5, 63.0, 50.0, 28.0 ],
-					"text" : "Delay\n",
+					"patching_rect" : [ 173.5, 68.0, 50.0, 17.0 ],
+					"text" : "Amount",
 					"textcolor" : [ 0.784313725490196, 0.784313725490196, 0.784313725490196, 1.0 ],
 					"textjustification" : 1
 				}
@@ -65,8 +63,6 @@
 					"outlettype" : [ "", "float" ],
 					"parameter_enable" : 1,
 					"patching_rect" : [ 173.5, 80.0, 44.0, 15.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 176.5, 78.0, 44.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_mmax" : 285.0,
@@ -83,41 +79,6 @@
 ,
 					"textcolor" : [ 0.427450980392157, 0.843137254901961, 1.0, 1.0 ],
 					"varname" : "live.numbox[1]"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"activedialcolor" : [ 0.427450980392157, 0.843137254901961, 1.0, 1.0 ],
-					"activefgdialcolor" : [ 0.223529411764706, 0.223529411764706, 0.223529411764706, 1.0 ],
-					"activeneedlecolor" : [ 0.427450980392157, 0.843137254901961, 1.0, 1.0 ],
-					"appearance" : 3,
-					"id" : "obj-15",
-					"maxclass" : "live.dial",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "float" ],
-					"parameter_enable" : 1,
-					"patching_rect" : [ 248.0, 78.5, 50.0, 69.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 171.5, -2.0, 50.0, 69.0 ],
-					"saved_attribute_attributes" : 					{
-						"valueof" : 						{
-							"parameter_mmax" : 200.0,
-							"parameter_initial" : [ 100.0 ],
-							"parameter_shortname" : "Delay",
-							"parameter_type" : 0,
-							"parameter_unitstyle" : 5,
-							"parameter_longname" : "live.dial[2]",
-							"parameter_initial_enable" : 1
-						}
-
-					}
-,
-					"textcolor" : [ 0.784313725490196, 0.784313725490196, 0.784313725490196, 1.0 ],
-					"triangle" : 1,
-					"tricolor" : [ 0.156862745098039, 0.156862745098039, 0.156862745098039, 1.0 ],
-					"varname" : "live.dial[2]"
 				}
 
 			}
@@ -163,7 +124,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 355.0, 311.0, 128.0, 128.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 78.0, 0.0, 72.0, 103.0 ],
+					"presentation_rect" : [ 78.0, 7.0, 72.0, 18.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -271,8 +232,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 204.0, 297.0, 75.0, 21.0 ],
-					"text" : "offset 0 -228"
+					"patching_rect" : [ 204.0, 297.0, 73.0, 21.0 ],
+					"text" : "offset -150 0"
 				}
 
 			}
@@ -392,7 +353,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 233.0, 63.5, 50.0, 63.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 12.5, 0.0, 50.0, 63.0 ],
+					"presentation_rect" : [ 12.5, 6.0, 50.0, 63.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_initial" : [ 60.0 ],
@@ -419,9 +380,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 298.0, 94.5, 50.0, 17.0 ],
+					"patching_rect" : [ 337.0, 28.5, 50.0, 17.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 12.5, 63.0, 50.0, 17.0 ],
+					"presentation_rect" : [ 12.5, 64.0, 50.0, 17.0 ],
 					"text" : "Duration",
 					"textcolor" : [ 0.784313725490196, 0.784313725490196, 0.784313725490196, 1.0 ],
 					"textjustification" : 1
@@ -438,7 +399,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "float" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 298.0, 115.5, 44.0, 15.0 ],
+					"patching_rect" : [ 337.0, 49.5, 44.0, 15.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 15.5, 78.0, 44.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
@@ -617,7 +578,6 @@
 			"obj-7::obj-118::obj-30" : [ "Enable[1]", "Enable", 0 ],
 			"obj-7::obj-19" : [ "Map[23]", "Map", 0 ],
 			"obj-7::obj-118::obj-41::obj-25" : [ "ListItems[1]", "ListItems", 0 ],
-			"obj-15" : [ "live.dial[2]", "Delay", 0 ],
 			"obj-7::obj-5" : [ "live.numbox", "param-value", 0 ],
 			"obj-7::obj-15" : [ "Unmap[22]", "unmap", 0 ],
 			"obj-17" : [ "live.numbox[1]", "live.numbox", 0 ],

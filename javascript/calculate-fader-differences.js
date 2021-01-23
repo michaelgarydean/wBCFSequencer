@@ -5,6 +5,7 @@
  * @project		wBSCFSequencer
  *
  * @description					Calculate the differences between numbers in a list.
+ *								
  *
  * @param	num_steps			js arg 1: the number of steps in the step sequencer
  */
@@ -37,7 +38,6 @@ var num_steps = 16;				// Number of steps in the sequencer
 var positions_saved = 0;		// A flag to determine whether the positions have already been saved or not.
 
 var fader_link_state = 0;		// Has the "Fader Link" button been pressed?
-
 
 
 /* object initialization */
@@ -110,7 +110,7 @@ function calculateDifferences(step,value) {
 		if (i!=(step-1)) {
 			
 			//Only calculate a new position if the frozen position was some value other than 0.
-			if(frozen_positions[i]!=0) {
+			if(frozen_positions[i]!=0 || fader_link_state==2) {
 				new_step = frozen_positions[i]+difference;
 			} else {
 				new_step = 0;

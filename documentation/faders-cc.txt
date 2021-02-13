@@ -1,0 +1,16 @@
+Fader 1:      3
+Fader 2:      9
+Fader 3:      29
+Fader 4:      30
+Fader 5:      31
+Fader 6:      85
+Fader 7:      86
+Fader 8:      87
+Fader 9:      89
+Fader 10:    90
+Fader 11:     114
+Fader 12:     115
+Fader 13:     116
+Fader 14:     117
+Fader 15:     118
+Fader 16:     119

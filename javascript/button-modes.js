@@ -17,7 +17,7 @@
 /* initialize attributes */
 autowatch = 1;
 inlets = 1;		
-outlets = 5;	// Total number of buttons + 1
+outlets = 6;	// Total number of buttons + 1
 
 /* Set up private functions */
 onLoad.local = 1;
@@ -89,10 +89,10 @@ function repeat_mode() {
 	outlet(2,0);
 	outlet(3,0);
 	outlet(4,1);
-	outputMode(3);
+	outputMode(4);
 }
 
 function outputMode(current_mode) {
-	outlet(4, current_mode);
+	outlet(5, current_mode);
 }
 

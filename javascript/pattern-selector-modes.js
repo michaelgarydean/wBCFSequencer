@@ -14,13 +14,21 @@
  */
 
 
-/* initialize attributes */
-autowatch = 1;
-inlets = 1;		
-outlets = 6;	// Total number of buttons + 1
+
 
 /* Set up private functions */
 onLoad.local = 1;
+outputValue.local = 1;
+
+/* variables */
+var write_state = 0;
+var current_value = 0;
+var num_inputs = 6;
+
+/* initialize attributes */
+autowatch = 1;
+inlets = 1;		
+outlets = num_inputs+1;		// Total number of buttons + 1
 
 /* 
  * = = = = = =
@@ -41,58 +49,42 @@ onLoad.local = 1;
 function onLoad() {
 }
 
+function outputValue(current_value) {
+	outlet(6, current_value);
+}
+
+function updateButtons(button_val) {
+	for (i = 0; i < num_inputs; i++) {
+		if(i==button_val) {
+			outlet(i,1);
+			post(i);
+		} else {
+			outlet(i,0);
+		}
+	}
+}
+
 /*
  * - - - - - - - - - 
  * PUBLIC FUNCTIONS
  * - - - - - - - - -
  */
 
-function note_mode() {
-	outlet(0,1);
-	outlet(1,0);
-	outlet(2,0);
-	outlet(3,0);
-	outlet(4,0);
-	outputMode(0);
+/*
+ * Monitor the Write button and only output and update buttons if not in write mode.
+ */
+function write(write_val) {
+	write_state = write_val;
 }
 
-function cc_mode() {
-	outlet(0,0);
-	outlet(1,1);
-	outlet(2,0);
-	outlet(3,0);
-	outlet(4,0);
-	outputMode(1);
-}
-
-function delay_mode() {
-	outlet(0,0);
-	outlet(1,0);
-	outlet(2,1);
-	outlet(3,0);
-	outlet(4,0);
-	outputMode(2);
-}
-
-function probability_mode() {
-	outlet(0,0);
-	outlet(1,0);
-	outlet(2,0);
-	outlet(3,1);
-	outlet(4,0);
-	outputMode(3);
-}
-
-function repeat_mode() {
-	outlet(0,0);
-	outlet(1,0);
-	outlet(2,0);
-	outlet(3,0);
-	outlet(4,1);
-	outputMode(4);
-}
-
-function outputMode(current_mode) {
-	outlet(5, current_mode);
+function input(input_val) {
+	//only update buttons if write state is off
+	if(write_state == 0) {
+		current_value = input_val;
+		updateButtons(input_val);
+		outputValue(input_val);
+	} else {
+		updateButtons(current_value);
+	}
 }
 

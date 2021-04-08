@@ -53,11 +53,13 @@ function outputValue(current_value) {
 	outlet(6, current_value);
 }
 
-function updateButtons(button_val) {
+/*
+* Send a 0 to turn off all buttons, except send 1 for the button that was clicked. 
+*/
+function updateButtons(button_index) {
 	for (i = 0; i < num_inputs; i++) {
-		if(i==button_val) {
+		if(i==button_index) {
 			outlet(i,1);
-			post(i);
 		} else {
 			outlet(i,0);
 		}
